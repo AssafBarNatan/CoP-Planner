@@ -1,0 +1,171 @@
+% This is for making text and a blank line until the end of the line. The input is the text, and this adds a blank line after it.
+\newlength{\remaining}
+\newcommand{\fillinline}[1]{%
+\setlength{\remaining}{\textwidth-\widthof{\textsc{#1}}-1.5cm}
+\textsc{#1} $\rule{\remaining}{0.15mm}$}
+
+% mypage command creates a new page with the spiffy background
+\newcommand{\mypage}{\newpage 
+\tikz[remember picture,overlay] 
+\node[opacity=0.25,inner sep=0pt] at (-0.6,-0.6)
+{\includegraphics[height=\paperheight]{./Images/Hopf_colour.png}};}
+
+% myquote adds a quote for the quotes page. First input is the quote, second input is the person who said it
+\newcommand{\myquote}[2]{
+\begin{flushleft}
+  \enquote{#1}
+\end{flushleft}
+\begin{flushright}
+  -- #2
+\end{flushright}
+\begin{center}
+  \pgfornament[width=3cm,height=0.3cm]{87}
+\end{center}
+}
+
+% Boxes and such defined below:
+
+\newtcolorbox{mybox}[1][]{
+enhanced,
+arc=0pt,
+outer arc=0pt,
+colback=black!1!white,
+colframe=black!50!white,
+boxrule=0.8pt,
+attach boxed title to top center={yshift=-2mm},
+top=20pt,
+bottom=10pt,
+arc=5pt,
+auto outer arc,
+#1
+}
+
+\newtcolorbox{titlebox}[1][]{
+enhanced,
+arc=0pt,
+outer arc=0pt,
+colback=black!1!white,
+colframe=black!50!white,
+boxrule=0.8pt,
+attach boxed title to top center={yshift=-2mm},
+top=10pt,
+bottom=10pt,
+arc=5pt,
+auto outer arc,
+%nobeforeafter,
+%overlay={\node[draw,fill=white,fill opacity=1,inner sep=5mm,rounded corners] at ([xshift=1.5cm,yshift=-0.6cm]frame.north west) {Date:$\rule{0.75cm}{0.15mm}$};},
+#1
+}
+
+\newtcolorbox{ratebox}[1][]{
+enhanced,
+arc=0pt,
+outer arc=0pt,
+colback=black!1!white,
+colframe=black!50!white,
+boxrule=0.8pt,
+attach boxed title to top center={yshift=-5mm},
+top=20pt,
+bottom=10pt,
+arc=5pt,
+auto outer arc,
+#1
+}
+
+\newtcolorbox{listbox}[1][]{
+enhanced,
+arc=0pt,
+outer arc=0pt,
+colback=black!1!white,
+colframe=black!50!white,
+boxrule=0.8pt,
+attach boxed title to top center={yshift=-2mm},
+top=10pt,
+bottom=20pt,
+arc=5pt,
+auto outer arc,
+#1
+}
+
+% Teaching toolbox commands
+
+% First input: name
+% second input: what is it?
+% Third input: variants
+% Fourth input: Uses
+\newcommand{\addtoolboxitem}[4]{
+\mypage
+\addcontentsline{toc}{subsection}{#1}
+\subsection*{#1}
+\vspace{0.25in}
+\begin{center}
+  \begin{tabular}{rp{3in}}
+    \textbf{What it is:}& #2 \\
+    \textbf{Possible Variants:}&#3\\
+    \textbf{Uses:}& #4\\
+    \textbf{Tips\&Tricks:}&
+    %\begin{minipage}{\textwidth}
+      \setstretch{1.3}
+      \vspace{0.3cm}
+      $\rule{3in}{0.15mm}$\newline
+      $\rule{3in}{0.15mm}$\newline
+      $\rule{3in}{0.15mm}$
+      \setstretch{1}
+    %\end{minipage}
+    \\
+  \end{tabular}
+\end{center}
+\vspace*{\fill}
+\begin{center}
+  \begin{mybox}[width=\textwidth,title={Experiences}]
+    \vspace{2in}
+  \end{mybox}
+\end{center}
+}
+
+%blank teaching toolbox item
+\newcommand{\addblanktoolboxitem}{
+\mypage
+\subsection*{$\rule{6cm}{0.15mm}$}
+\vspace{0.25in}
+\begin{center}
+  \begin{tabular}{rp{3in}}
+    \textbf{What it is:}& 
+        \setstretch{1.3}
+        \vspace{0.3cm}
+        $\rule{3in}{0.15mm}$\newline
+        $\rule{3in}{0.15mm}$\newline
+        $\rule{3in}{0.15mm}$
+        \setstretch{1} \\
+    \textbf{Possible Variants:}&
+        \setstretch{1.3}
+        \vspace{0.3cm}
+        $\rule{3in}{0.15mm}$\newline
+        $\rule{3in}{0.15mm}$
+        \setstretch{1} \\
+    \textbf{Uses:}&
+        \setstretch{1.3}
+        \vspace{0.3cm}
+        $\rule{3in}{0.15mm}$\newline
+        $\rule{3in}{0.15mm}$\newline
+        $\rule{3in}{0.15mm}$
+        \setstretch{1} \\
+    \textbf{Tips\&Tricks:}&
+    %\begin{minipage}{\textwidth}
+      \setstretch{1.3}
+      \vspace{0.3cm}
+      $\rule{3in}{0.15mm}$\newline
+      $\rule{3in}{0.15mm}$\newline
+      $\rule{3in}{0.15mm}$
+      \setstretch{1}
+    %\end{minipage}
+    \\
+  \end{tabular}
+\end{center}
+\vspace*{\fill}
+\begin{center}
+  \begin{mybox}[width=\textwidth,title={Experiences}]
+    \vspace{2in}
+  \end{mybox}
+\end{center}
+}

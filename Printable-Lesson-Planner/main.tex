@@ -1,0 +1,57 @@
+\documentclass[12pt]{article} %try documentclass book
+
+%\usepackage[left=0.5in,right=0.5in, top=0.2in, bottom=0.8in]{geometry}
+%\geometry{papersize={6in,9in}}
+
+\usepackage[left=0.625in,right=0.625in, top=0.325in, bottom=0.925in]{geometry}
+\geometry{papersize={6.25in,9.25in}}
+\linespread{1.3}
+\usepackage[most]{tcolorbox}
+\usepackage{pgfornament}
+\usepackage{lipsum}
+\usepackage{transparent}
+\usepackage{tikz}
+\usepackage{csquotes}
+\usepackage{setspace}
+\usepackage{calc}
+
+\input{mycommands.tex}
+
+\def \bs{\textbackslash}
+\newcommand{\mute}[1]{}
+
+\newcommand{\addlesson}{\input{pre_class.tex}\input{activities_1.tex}\input{activities_2.tex}\input{reflection.tex}}
+
+\newcommand{\Repeat}[2]{
+    \foreach \n in {1,...,#1}{#2}
+}
+
+\begin{document}
+%\pagenumbering{gobble}
+\input{cover.tex}
+\setcounter{page}{1}
+\input{front_cover.tex}
+\mypage
+\input{tableofcontents.tex}
+\mypage
+\input{calendar_title.tex}
+\input{important_dates.tex}
+%\input{blank_calendar.tex}
+%\input{course_overview.tex} %what days cover what content?
+\mypage
+\input{lesson_plans_title.tex}
+\mypage
+\Repeat{40}{\addlesson}
+\mypage
+\mypage
+\input{teaching_toolbox_title.tex}
+\input{teaching_toolbox.tex}
+\mypage
+\input{targeted_reflection.tex}
+%\input{tips_tricks.tex}
+\input{CIQ.tex}
+\input{resources.tex}
+\input{teaching_quotes.tex}
+\input{back_cover.tex}
+%\input{references.tex}
+\end{document}

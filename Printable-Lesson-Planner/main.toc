@@ -1,0 +1,25 @@
+\contentsline {section}{Calendar}{5}%
+\contentsline {section}{Lesson Plans}{11}%
+\contentsline {section}{Teaching Toolbox}{175}%
+\contentsline {subsection}{Timed Think}{176}%
+\contentsline {subsection}{Think-Pair-Share (TPS)}{177}%
+\contentsline {subsection}{Punctuated Lecture}{178}%
+\contentsline {subsection}{Free-For-All Online Discussion}{179}%
+\contentsline {subsection}{1-Minute Essay}{180}%
+\contentsline {subsection}{Fill-In Blanks}{181}%
+\contentsline {subsection}{Write \& Quiz}{182}%
+\contentsline {subsection}{Concept Map}{183}%
+\contentsline {subsection}{Critique History \& News}{184}%
+\contentsline {subsection}{Going Through the Steps}{185}%
+\contentsline {subsection}{The Tommy Question}{186}%
+\contentsline {subsection}{Round Robin}{187}%
+\contentsline {subsection}{Ice Cream Sandwich}{188}%
+\contentsline {subsection}{Draw the Definition/Theorem}{189}%
+\contentsline {subsection}{Geogebra Applets}{190}%
+\contentsline {subsection}{Jigsaw}{191}%
+\contentsline {subsection}{Gameshow}{192}%
+\contentsline {subsection}{Paper Passaround}{193}%
+\contentsline {subsection}{Run the Test}{194}%
+\contentsline {section}{Targeted Reflection Questions}{202}%
+\contentsline {section}{Critical Incident Questionnaire}{203}%
+\contentsline {section}{Resources}{204}%
